@@ -35,21 +35,33 @@ function Dashboard() {
   };  
 
   // Load user preferences
-  useEffect(() => {
-    const fetchPreferences = async (docSnap) => {
-      try {
-        const data = docSnap.data();
+  const loadPreferences = async () => {
+    if (!user || !user.uid) return;
 
-        const preferences = data?.preferences || [];
-        setUserPreferences(preferences);
+    console.log("Loading user preferences");
+
+    try {
+      const userRef = doc(db, "users", user.uid);
+      const userSnap = await getDoc(userRef);
+
+      if (!userSnap.exists()) {
+        console.warn("User document does not exist.");
+        return;
       }
-      catch (error) {
-        console.error("BEEP BEEP BEEP BEEP:", error);
-      }
-    };        
-  
-    fetchPreferences();
-  }, [user]);
+
+      const data = userSnap.data();
+      const preferences = data?.preferences || { genres: [], ageGroups: [] };
+      setUserPreferences(preferences);
+    } catch (error) {
+      navigate('/preferences');
+      console.error("Error loading preferences:", error);
+    }
+  };
+
+  // useEffect that loads preferences
+  useEffect(() => {
+    loadPreferences();
+  }, [user?.uid]);
 
   //BASICLALY NOT SAVING PREFERENCES I THINK
 
@@ -85,7 +97,7 @@ function Dashboard() {
     
         await Promise.all([
           fetchUserData(userSnap),
-          fetchPreferences(userSnap),
+          loadPreferences(),
         ]);
       } catch (error) {
         console.error("Error loading user data:", error);

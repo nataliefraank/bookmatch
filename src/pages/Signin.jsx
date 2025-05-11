@@ -11,6 +11,8 @@ const SignIn = () => {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
 
+  const [user, setUser] = useState();
+
   const { setToken } = useAuth();
   const navigate = useNavigate();
 

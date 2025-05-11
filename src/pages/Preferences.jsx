@@ -5,7 +5,7 @@ import '../App.css';
 import '../index.css';
 import { Button } from 'flowbite-react';
 import { db } from '../../config/firebase';
-import { getFirestore, doc, setDoc } from 'firebase/firestore';
+import { getDoc, doc, setDoc } from 'firebase/firestore';
 import { getAuth } from "firebase/auth";
 
 function Preferences() {
@@ -20,8 +20,39 @@ function Preferences() {
     setList(prev => prev.includes(item) ? prev.filter(i => i !== item) : [...prev, item]);
   };
   
+  const [user, setUser] = useState(null);
   const auth = getAuth();
-  const user = auth.currentUser;
+
+  useEffect(() => {
+    const unsubscribe = auth.onAuthStateChanged((firebaseUser) => {
+      setUser(firebaseUser);
+    });
+
+    return () => unsubscribe();
+  }, []);
+
+  useEffect(() => {
+    const fetchPreferences = async () => {
+      if (!user) return;
+  
+      try {
+        const userRef = doc(db, 'users', user.uid);
+        const userSnap = await getDoc(userRef);
+  
+        if (userSnap.exists()) {
+          const data = userSnap.data();
+          const prefs = data.preferences || {};
+  
+          setSelectedGenres(prefs.genres || []);
+          setSelectedAges(prefs.ageGroups || []);
+        }
+      } catch (error) {
+        console.error('Error loading preferences:', error);
+      }
+    };
+  
+    fetchPreferences();
+  }, [user]);  
 
   // Save preferences
   const handleSubmit = async (event) => {
@@ -31,10 +62,6 @@ function Preferences() {
       console.log("User is not authenticated");
       return;
     }
-  
-    console.log("User UID:", user.uid);
-    console.log("Selected Genres:", selectedGenres);
-    console.log("Selected Age Groups:", selectedAges);
   
     try {
       const userRef = doc(db, 'users', user.uid);
@@ -48,8 +75,8 @@ function Preferences() {
       }, { merge: true });
   
       // Navigate to dashboard after saving preferences
-      // navigate('/dashboard');
-      // console.log("Navigating to dashboard.");
+      navigate('/dashboard');
+      console.log("Navigating to dashboard.");
     } catch (error) {
       console.error('Error saving preferences:', error);
     }

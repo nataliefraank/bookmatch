@@ -1,28 +1,36 @@
 import axios from "axios";
 import { createContext, useContext, useEffect, useMemo, useState } from "react";
+import { auth } from "../../config/firebase"; // Make sure this path is correct
+import { onAuthStateChanged } from 'firebase/auth';
 
 const AuthContext = createContext();
 
 const AuthProvider = ({ children }) => {
-  // State to hold the authentication token
-  const [token, setToken_] = useState(localStorage.getItem("token"));
+  const [token, setToken_] = useState(null);
+  const [loading, setLoading] = useState(true);
 
-  // Function to set the authentication token
   const setToken = (newToken) => {
     setToken_(newToken);
   };
 
   useEffect(() => {
-    if (token) {
-      axios.defaults.headers.common["Authorization"] = "Bearer " + token;
-      localStorage.setItem("token", token);
-    } else {
-      delete axios.defaults.headers.common["Authorization"];
-      localStorage.removeItem("token");
-    }
-  }, [token]);
+    const unsubscribe = onAuthStateChanged(auth, async (user) => {
+      if (user) {
+        const idToken = await user.getIdToken();
+        setToken_(idToken);
+        axios.defaults.headers.common["Authorization"] = "Bearer " + idToken;
+        localStorage.setItem("token", idToken);
+      } else {
+        setToken_(null);
+        delete axios.defaults.headers.common["Authorization"];
+        localStorage.removeItem("token");
+      }
+      setLoading(false);
+    });
 
-  // Memoized value of the authentication context
+    return () => unsubscribe();
+  }, []);
+
   const contextValue = useMemo(
     () => ({
       token,
@@ -31,14 +39,15 @@ const AuthProvider = ({ children }) => {
     [token]
   );
 
-  // Provide the authentication context to the children components
+  if (loading) return null; // or a spinner
+
   return (
-    <AuthContext.Provider value={contextValue}>{children}</AuthContext.Provider>
+    <AuthContext.Provider value={contextValue}>
+      {children}
+    </AuthContext.Provider>
   );
 };
 
-export const useAuth = () => {
-  return useContext(AuthContext);
-};
+export const useAuth = () => useContext(AuthContext);
 
 export default AuthProvider;
