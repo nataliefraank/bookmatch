@@ -1,0 +1,7 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+    <string name="app_name">BookMatch</string>
+    <string name="title_activity_main">BookMatch</string>
+    <string name="package_name">com.example.bookmatch</string>
+    <string name="custom_url_scheme">com.example.bookmatch</string>
+</resources>
