@@ -1,0 +1,35 @@
+@import "tailwindcss";
+
+/*
+ * Dark mode disabled for now (system dark was unreliable / unwanted).
+ * Re-enable by:
+ *   1) Removing the @custom-variant dark line below.
+ *   2) Uncommenting the @media (prefers-color-scheme: dark) :root block.
+ */
+@custom-variant dark (&:not(*));
+
+:root {
+  --background: #ffffff;
+  --foreground: #171717;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+}
+
+/* @media (prefers-color-scheme: dark) {
+  :root {
+    --background: #0a0a0a;
+    --foreground: #ededed;
+  }
+} */
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: "Open Sans", sans-serif;
+  /* letter-spacing: px; */
+}

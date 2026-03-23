@@ -1,0 +1,46 @@
+{
+  "name": "bookmatch",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start -p 80",
+    "lint": "next lint"
+  },
+  "dependencies": {
+    "@aws-amplify/ui-react": "^6.11.2",
+    "@types/pg": "^8.15.4",
+    "aws-amplify": "^6.15.3",
+    "aws-sdk": "^1.18.0",
+    "body-parser": "^2.2.0",
+    "bootstrap-icons": "^1.13.1",
+    "express": "^5.1.0",
+    "flowbite": "^3.1.2",
+    "next": "^15.4.6",
+    "next-auth": "^4.24.11",
+    "node-fetch": "^3.3.2",
+    "oidc-client-ts": "^3.3.0",
+    "pg": "^8.16.3",
+    "react": "^19.1.0",
+    "react-dom": "^19.1.0",
+    "react-icons": "^5.5.0",
+    "react-oidc-context": "^3.3.0",
+    "react-router-dom": "^7.7.0",
+    "react-swipeable": "^7.0.2",
+    "tailwind": "^2.3.1"
+  },
+  "devDependencies": {
+    "@commitlint/cli": "^19.8.1",
+    "@commitlint/config-conventional": "^19.8.1",
+    "@tailwindcss/postcss": "^4",
+    "@types/express": "^5.0.3",
+    "@types/node": "^20.19.9",
+    "@types/react": "^19.1.8",
+    "@types/react-dom": "^19",
+    "husky": "^9.1.7",
+    "prettier": "^3.6.2",
+    "tailwindcss": "^4",
+    "typescript": "^5.8.3"
+  }
+}

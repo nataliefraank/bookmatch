@@ -1,0 +1,57 @@
+.pill-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  max-width: 22rem;
+  padding: 1rem 2rem;
+  border-radius: 9999px;
+  font-weight: 700;
+  font-size: 0.8125rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  cursor: pointer;
+  text-decoration: none;
+  border: 2px solid transparent;
+  box-sizing: border-box;
+  font-family: var(--font-geist-sans), system-ui, sans-serif;
+  transition:
+    opacity 0.2s ease,
+    background-color 0.2s ease,
+    border-color 0.2s ease;
+}
+
+.pill-button:hover {
+  opacity: 0.92;
+}
+
+.pill-button:focus-visible {
+  outline: 2px solid currentColor;
+  outline-offset: 3px;
+}
+
+/* Filled + cream (primary CTA) */
+.pill-button--fill.pill-button--fill-cream {
+  background-color: #faf6f0;
+  color: #b91c1c;
+  border-color: transparent;
+}
+
+/* Ghost + white (secondary) */
+.pill-button--ghost.pill-button--ghost-white {
+  background-color: transparent;
+  color: #ffffff;
+  border-color: #ffffff;
+}
+
+/* Fallbacks for unknown color tokens */
+.pill-button--fill:not(.pill-button--fill-cream) {
+  background-color: #faf6f0;
+  color: #b91c1c;
+}
+
+.pill-button--ghost:not(.pill-button--ghost-white) {
+  background-color: transparent;
+  color: #ffffff;
+  border-color: #ffffff;
+}

@@ -1,0 +1,260 @@
+├── .env
+├── .gitignore
+├── .next
+│  ├── app-build-manifest.json
+│  ├── app-path-routes-manifest.json
+│  ├── BUILD_ID
+│  ├── build-manifest.json
+│  ├── cache
+│  │  ├── .previewinfo
+│  │  ├── .rscinfo
+│  │  ├── .tsbuildinfo
+│  │  ├── chrome-devtools-workspace-uuid
+│  │  ├── images
+│  │  │  ├── _WCTqVQ-QNns4QHMrY_W93LsZag1tBiGciBzPI6Q3kg
+│  │  │  │  └── 60.1753293886396.jdJrccjVWAGmuLrxsxG6NIdfXoIm0UJvTMFYTXQ9sMo.Vy8iNGI1MS0xOTgzNDA4OTg2YyI.webp
+│  │  │  └── Eq1vv_iYB66iHKtNqZzRL6pjc33hTlgDAm7Z1y0hyEM
+│  │  │    └── 60.1753368218615.sx49WkE2sP91OwwlMRdwfW1HIHzZwf1BGuNSaHehFXg.Vy8iNjc4ZS0xOTgzODc2NzU5OSI.webp
+│  │  ├── swc
+│  │  │  └── plugins
+│  │  │    └── v7_macos_aarch64_15.0.1
+│  │  └── webpack
+│  │    ├── client-production
+│  │    │  ├── 0.pack
+│  │    │  ├── 1.pack
+│  │    │  ├── 10.pack
+│  │    │  ├── 11.pack
+│  │    │  ├── 12.pack
+│  │    │  ├── 13.pack
+│  │    │  ├── 14.pack
+│  │    │  ├── 15.pack
+│  │    │  ├── 16.pack
+│  │    │  ├── 2.pack
+│  │    │  ├── 3.pack
+│  │    │  ├── 4.pack
+│  │    │  ├── 5.pack
+│  │    │  ├── 6.pack
+│  │    │  ├── 7.pack
+│  │    │  ├── 8.pack
+│  │    │  ├── 9.pack
+│  │    │  ├── index.pack
+│  │    │  └── index.pack.old
+│  │    ├── edge-server-production
+│  │    │  ├── 0.pack
+│  │    │  └── index.pack
+│  │    └── server-production
+│  │      ├── 0.pack
+│  │      ├── 1.pack
+│  │      ├── 10.pack
+│  │      ├── 2.pack
+│  │      ├── 3.pack
+│  │      ├── 4.pack
+│  │      ├── 5.pack
+│  │      ├── 6.pack
+│  │      ├── 7.pack
+│  │      ├── 8.pack
+│  │      ├── 9.pack
+│  │      ├── index.pack
+│  │      └── index.pack.old
+│  ├── diagnostics
+│  │  ├── build-diagnostics.json
+│  │  └── framework.json
+│  ├── export
+│  │  ├── _next
+│  │  │  └── 1RqtPn_z4IjxEeRO6cCRI
+│  │  ├── 404.html
+│  │  └── 500.html
+│  ├── export-detail.json
+│  ├── package.json
+│  ├── react-loadable-manifest.json
+│  ├── required-server-files.json
+│  ├── routes-manifest.json
+│  ├── server
+│  │  ├── app
+│  │  │  ├── _not-found
+│  │  │  │  ├── page_client-reference-manifest.js
+│  │  │  │  ├── page.js
+│  │  │  │  └── page.js.nft.json
+│  │  │  ├── _not-found.html
+│  │  │  ├── _not-found.meta
+│  │  │  ├── _not-found.rsc
+│  │  │  ├── cur
+│  │  │  │  ├── page_client-reference-manifest.js
+│  │  │  │  ├── page.js
+│  │  │  │  └── page.js.nft.json
+│  │  │  ├── cur.html
+│  │  │  ├── cur.meta
+│  │  │  ├── cur.rsc
+│  │  │  ├── favicon.ico
+│  │  │  │  ├── route.js
+│  │  │  │  └── route.js.nft.json
+│  │  │  ├── favicon.ico.body
+│  │  │  ├── favicon.ico.meta
+│  │  │  ├── index.html
+│  │  │  ├── index.meta
+│  │  │  ├── index.rsc
+│  │  │  ├── least
+│  │  │  │  ├── page_client-reference-manifest.js
+│  │  │  │  ├── page.js
+│  │  │  │  └── page.js.nft.json
+│  │  │  ├── least.html
+│  │  │  ├── least.meta
+│  │  │  ├── least.rsc
+│  │  │  ├── login
+│  │  │  │  ├── page_client-reference-manifest.js
+│  │  │  │  ├── page.js
+│  │  │  │  └── page.js.nft.json
+│  │  │  ├── page_client-reference-manifest.js
+│  │  │  ├── page.js
+│  │  │  ├── page.js.nft.json
+│  │  │  ├── past
+│  │  │  │  ├── page_client-reference-manifest.js
+│  │  │  │  ├── page.js
+│  │  │  │  └── page.js.nft.json
+│  │  │  ├── past.html
+│  │  │  ├── past.meta
+│  │  │  ├── past.rsc
+│  │  │  └── rec
+│  │  │    ├── page_client-reference-manifest.js
+│  │  │    ├── page.js
+│  │  │    └── page.js.nft.json
+│  │  ├── app-paths-manifest.json
+│  │  ├── chunks
+│  │  │  ├── 400.js
+│  │  │  ├── 548.js
+│  │  │  └── 985.js
+│  │  ├── functions-config-manifest.json
+│  │  ├── interception-route-rewrite-manifest.js
+│  │  ├── middleware-build-manifest.js
+│  │  ├── middleware-manifest.json
+│  │  ├── middleware-react-loadable-manifest.js
+│  │  ├── next-font-manifest.js
+│  │  ├── next-font-manifest.json
+│  │  ├── pages
+│  │  │  ├── _app.js
+│  │  │  ├── _app.js.nft.json
+│  │  │  ├── _document.js
+│  │  │  ├── _document.js.nft.json
+│  │  │  ├── _error.js
+│  │  │  └── _error.js.nft.json
+│  │  ├── pages-manifest.json
+│  │  ├── server-reference-manifest.js
+│  │  ├── server-reference-manifest.json
+│  │  └── webpack-runtime.js
+│  ├── static
+│  │  ├── 1RqtPn_z4IjxEeRO6cCRI
+│  │  │  ├── _buildManifest.js
+│  │  │  └── _ssgManifest.js
+│  │  ├── chunks
+│  │  │  ├── 108-3af23e4925e4ed56.js
+│  │  │  ├── 212-40267fbaf106604d.js
+│  │  │  ├── 4bd1b696-cf72ae8a39fa05aa.js
+│  │  │  ├── 964-c3e49cf7341645bb.js
+│  │  │  ├── app
+│  │  │  │  ├── _not-found
+│  │  │  │  │  └── page-d50a59db8c4cd1d2.js
+│  │  │  │  ├── cur
+│  │  │  │  │  └── page-020ea19d00c4e9c8.js
+│  │  │  │  ├── layout-0fd499651143f27c.js
+│  │  │  │  ├── least
+│  │  │  │  │  └── page-020ea19d00c4e9c8.js
+│  │  │  │  ├── login
+│  │  │  │  │  └── page-9442867abf2e5b76.js
+│  │  │  │  ├── page-167f46cd2e08575e.js
+│  │  │  │  ├── past
+│  │  │  │  │  └── page-020ea19d00c4e9c8.js
+│  │  │  │  └── rec
+│  │  │  │    └── page-020ea19d00c4e9c8.js
+│  │  │  ├── framework-7c95b8e5103c9e90.js
+│  │  │  ├── main-af0cc4d86104c197.js
+│  │  │  ├── main-app-b9eae17c6f885abb.js
+│  │  │  ├── pages
+│  │  │  │  ├── _app-0a0020ddd67f79cf.js
+│  │  │  │  └── _error-03529f2c21436739.js
+│  │  │  ├── polyfills-42372ed130431b0a.js
+│  │  │  └── webpack-8c94b35adf29e9b1.js
+│  │  ├── css
+│  │  │  └── 657332a6c1b7f0ea.css
+│  │  └── media
+│  │    ├── 569ce4b8f30dc480-s.p.woff2
+│  │    ├── 747892c23ea88013-s.woff2
+│  │    ├── 8d697b304b401681-s.woff2
+│  │    ├── 93f479601ee12b01-s.p.woff2
+│  │    ├── 9610d9e46709d722-s.woff2
+│  │    └── ba015fad6dcf6784-s.woff2
+│  ├── trace
+│  └── types
+│    ├── app
+│    │  ├── cur
+│    │  │  └── page.ts
+│    │  ├── layout.ts
+│    │  ├── least
+│    │  │  └── page.ts
+│    │  ├── login
+│    │  │  └── page.ts
+│    │  ├── page.ts
+│    │  ├── past
+│    │  │  └── page.ts
+│    │  └── rec
+│    │    └── page.ts
+│    ├── cache-life.d.ts
+│    └── package.json
+├── demo.tree
+├── Dockerfile
+├── next-env.d.ts
+├── next.config.ts
+├── package-lock.json
+├── package.json
+├── postcss.config.mjs
+├── public
+│  ├── bookmatch-slim.png
+│  ├── bookmatch.png
+│  ├── bookmatch.svg
+│  ├── file.svg
+│  ├── globe.svg
+│  ├── login.svg
+│  ├── vercel.svg
+│  └── window.svg
+├── README.md
+├── src
+│  ├── app
+│  │  ├── api
+│  │  │  ├── books
+│  │  │  ├── matches
+│  │  │  └── users
+│  │  ├── layout.tsx
+│  │  └── pages
+│  │    ├── cur
+│  │    │  └── page.tsx
+│  │    ├── least
+│  │    │  └── page.tsx
+│  │    ├── login
+│  │    │  └── page.tsx
+│  │    ├── past
+│  │    │  └── page.tsx
+│  │    └── rec
+│  │      └── page.tsx
+│  ├── components
+│  │  ├── App.tsx
+│  │  ├── common
+│  │  │  └── Modal.tsx
+│  │  ├── favicon.ico
+│  │  ├── globals.css
+│  │  ├── layout
+│  │  │  └── Layout.tsx
+│  │  ├── page.tsx
+│  │  ├── pages
+│  │  │  ├── BookDetailCard.tsx
+│  │  │  └── HomePageHero.tsx
+│  │  └── ui
+│  │    └── Button.tsx
+│  ├── hooks
+│  ├── lib
+│  │  ├── apiClient.tsx
+│  │  ├── auth.tsx
+│  │  └── db.tsx
+│  └── utils
+│    ├── capitalize.tsx
+│    ├── formatBook.tsx
+│    └── formatDate.tsx
+└── tsconfig.json

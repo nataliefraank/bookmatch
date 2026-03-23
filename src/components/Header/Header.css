@@ -1,0 +1,90 @@
+.header-wrap {
+  width: 100%;
+  max-width: 80rem;
+  margin-left: auto;
+  margin-right: auto;
+  padding-top: 1rem;
+  padding-bottom: 0.75rem;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  box-sizing: border-box;
+}
+
+/* One row: profile | Bookmatch | matches — vertically centered */
+.header-bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  gap: 0.5rem;
+  min-height: 2.5rem;
+}
+
+.header-profile {
+  flex: 0 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  min-width: 2.5rem;
+}
+
+.header-brand-center {
+  flex: 1 1 auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 0;
+}
+
+.header-heart {
+  flex: 0 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  min-width: 2.5rem;
+}
+
+.header-brand-link {
+  display: inline-flex;
+  align-items: center;
+  margin: 0;
+}
+
+/* Centered wordmark — /public/home/bookmatch.png */
+.header-brand-img {
+  height: auto;
+  width: auto;
+  max-width: min(90vw, 10rem);
+  max-height: 1.625rem;
+  object-fit: contain;
+  object-position: center;
+  vertical-align: middle;
+}
+
+@media (min-width: 640px) {
+  .header-brand-img {
+    max-height: 1.875rem;
+    max-width: 11rem;
+  }
+}
+
+.header-emoji-link {
+  font-size: 1.5rem;
+  line-height: 1;
+  padding: 0.25rem 0.35rem;
+  text-decoration: none;
+  border-radius: 0.5rem;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.header-emoji-link:hover {
+  background-color: rgba(0, 0, 0, 0.05);
+}
+
+@media (prefers-color-scheme: dark) {
+  .header-emoji-link:hover {
+    background-color: rgba(255, 255, 255, 0.08);
+  }
+}

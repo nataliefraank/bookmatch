@@ -1,0 +1,20 @@
+.search-container {
+    width: 100%;
+    max-width: 600px; /* or whatever maximum width you want */
+    margin: 0 auto;
+    border: 1px solid #e2e8f0;
+}
+
+.search-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+.search-button:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
